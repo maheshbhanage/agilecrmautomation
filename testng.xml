@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="AgileCrmAutomation">
+<listeners>
+<listener class-name="com.AgileCrmAutomation.TestListeners"></listener>
+</listeners>
+	
+	<test thread-count="4" parallel="classes" name="regression">
+		<parameter name="browser" value="chrome"></parameter>
+		<parameter name="username" value="mahesh33@yopmail.com"></parameter>
+		<parameter name="password" value="Test1234"></parameter>
+		<classes>
+		   <class name="com.AgileCrmAutomation.LoginTestCases"/>
+			
+		</classes>
+		</test>
+		<test name="sanity">
+  <parameter name="browser" value="egde"></parameter>
+ 
+	</test> <!-- Test -->
+		
+</suite> <!-- Suite -->
